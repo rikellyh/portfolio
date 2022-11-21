@@ -1,0 +1,6 @@
+@use 'variables'
+
+@mixin breakpoint($point) 
+    @if $point == 767px
+        @media (min-width: 767px) 
+          @content

@@ -1,0 +1,44 @@
+@use "../variables"
+
+img
+  max-width: 350px
+
+section
+  display: grid
+  padding: 30px 10px 0
+  justify-content: center
+  row-gap: 5px
+
+  h1
+    font-size: 3rem
+    font-weight: 700
+
+  .dashed-text
+    color: variables.$rosaria-4-hex
+
+  .avatar-contact
+    display: flex
+    flex-direction: column
+    align-items: center  
+    gap: 0.75rem
+
+    span
+      text-shadow: 2px 2px variables.$rosaria-1-hex
+      font-size: 1.25rem
+      font-weight: 700
+
+    div
+      align-items: center
+      display: flex
+      gap: 1.25rem
+
+      .about
+        background-color: variables.$rosaria-4-hex
+        border: 1px solid
+
+      a
+        background-color: variables.$rosaria-1-hex
+        padding: 0.75rem
+        border-radius: 8px
+        font-size: 0.875rem
+        font-weight: 500

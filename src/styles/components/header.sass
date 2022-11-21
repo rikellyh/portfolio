@@ -1,0 +1,47 @@
+@use '../variables'
+@use '../mixins'
+
+header
+  height: variables.$header-height
+  position: fixed
+  top: 0
+  z-index: 1000
+  width: 100%
+  background-color: variables.$rosaria-4-hex
+    
+  h1
+      font-size: 1.25rem
+
+.container-header
+  max-width: 1620px
+  margin: 0 auto
+  padding: 0 variables.$spacing-md
+  @include mixins.breakpoint($point: 767px)
+    .toggle
+      display: none
+  
+  transition: 0.3s ease padding
+
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+ul
+  display: none
+  @include mixins.breakpoint($point: 767px)
+    display: flex
+    gap: variables.$spacing-md
+
+  &.expanded 
+    display: flex
+    align-items: center
+    padding-top: 25px
+    width: 100%
+    height: calc(100vh - 50px)
+    background-color: variables.$rosaria-5-hex
+    position: absolute
+    top: 70px
+    left: 0
+    flex-direction: column
+    gap: 3rem
