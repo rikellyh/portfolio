@@ -4,3 +4,13 @@
     @if $point == 767px
         @media (min-width: 767px) 
           @content
+
+@mixin desktop($visualpc)
+    @if $visualpc == 1200px
+        @media ( min-width: 1200px)
+          @content
+
+@mixin flexbox($flex)
+  display: flex
+  justify-content: $flex
+  

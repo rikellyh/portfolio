@@ -1,0 +1,23 @@
+@use '../variables'
+
+.box-info
+  max-width: 18.75rem
+  width: 100%
+
+  text-align: center
+  border-radius: 50px
+  margin-bottom: 20px
+  padding: variables.$spacing-md
+  background-color: variables.$rosaria-1-hex
+  @media (min-width: 600px)
+    margin: 0 5px 20px 5px
+
+  ul
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 30px
+    gap: variables.$spacing-md
+
+  img
+    max-width: 15px

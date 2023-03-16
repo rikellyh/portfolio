@@ -1,5 +1,7 @@
 import Header from "./components/Header/Header";
+import AboutMe from "./pages/AboutMe/AboutMe";
 import SectionPresentation from "./pages/Presentation/Presentation";
+import Skills from "./pages/Skills/Skills";
 import "./styles/components/page.sass";
 
 function App() {
@@ -7,7 +9,9 @@ function App() {
     <div className="portfolio">
       <Header />
       <main>
-        <SectionPresentation></SectionPresentation>
+        <SectionPresentation />
+        <AboutMe />
+        <Skills />
       </main>
     </div>
   );
