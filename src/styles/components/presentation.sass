@@ -50,10 +50,70 @@ section
         font-size: 0.875rem
         font-weight: 500
 
-  .box-skills
+  .box
     margin-top: 20px
-    
+    text-align: -webkit-center
+
+    .social
+      @include mixins.flexbox($flex: space-evenly)
+      gap: 1rem
+      width: 100%
+
+    .contact
+      background-color: variables.$rosaria-1-hex
+      padding: 1rem 2.5rem
+      border-radius: 8px
+      font-weight: 500
+
+      &:hover
+        color: variables.$rosaria-3-hex
+        background-color: variables.$rosaria-4-hex
+
+    .content
+      margin-bottom: 2rem
+
+      .options-direct
+        display: flex
+        justify-content: center
+        gap: 1rem
+        margin-top: 2rem
+
+        a
+          background-color: variables.$rosaria-1-hex
+          padding: 0.75rem
+          border-radius: 8px
+          font-size: 0.875rem
+          font-weight: 500
+        
+        a:last-child
+          background-color: variables.$rosaria-4-hex
+          border: 1px solid
+      
+    span
+      font-size: 0.95rem
+
+    .app-link
+      line-height: 2rem
+      margin-right: .25rem
+
+      &:hover
+        color: variables.$rosaria-4-hex
+
+    .project
+      margin-bottom: 0.5rem
+
+      img
+        display: block
+        border-radius: 5px
+
     @media (min-width: 600px)
       @include mixins.flexbox($flex: space-evenly)
+      .content
+        margin: 0
+        width: 100%
+
+      .project
+        margin: 0 0.5rem
       
-    
+      .social
+        margin-top: 1rem

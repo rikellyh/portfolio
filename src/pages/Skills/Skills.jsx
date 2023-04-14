@@ -1,11 +1,11 @@
-import Hardskills from "../../components/BoxInfo/Hardskills/Hardskills";
-import Softskills from "../../components/BoxInfo/Softskills/Softskills";
+import Hardskills from '../../components/BoxInfo/Hardskills/Hardskills';
+import Softskills from '../../components/BoxInfo/Softskills/Softskills';
 
 const Skills = () => {
   return (
-    <section>
-      <h1 className="title">#Skills</h1>
-      <div className="box-skills">
+    <section id='skills'>
+      <h2 className='title'>#Skills</h2>
+      <div className='box'>
         <Hardskills />
         <Softskills />
       </div>

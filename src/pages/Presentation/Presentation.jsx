@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom';
 import avatar from '../../assets/avatar.png';
 import '../../styles/components/presentation.sass';
 
 const SectionPresentation = () => {
   return (
-    <section>
+    <section id='#'>
       <h1>Oi,</h1>
       <h2>me chamo Rikelly</h2>
       <span className='dashed-text'>
@@ -14,8 +13,16 @@ const SectionPresentation = () => {
         <img src={avatar} alt='' />
         <span>Desenvolvedora Web Fullstack</span>
         <div>
-          <Link to='https://wa.me/5581992889681'>Fale comigo</Link>
-          <Link className='about'>Quem sou eu</Link>
+          <a
+            href='https://wa.me/5581992889681'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Fale comigo
+          </a>
+          <a className='about' href='#aboutme'>
+            Quem sou eu
+          </a>
         </div>
       </div>
     </section>

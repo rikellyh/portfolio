@@ -1,9 +1,9 @@
-import "../../styles/components/presentation.sass";
+import '../../styles/components/presentation.sass';
 
 const AboutMe = () => {
   return (
-    <section>
-      <h1 className="title">#Sobre mim</h1>
+    <section id='aboutme'>
+      <h2 className='title'>#Sobre mim</h2>
       <p>
         Conheci programação em 2021 por indicação de um amigo Dev, mas achava
         que somente quem era 'gênio' em matemática poderia entrar para área...

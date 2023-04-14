@@ -1,20 +1,19 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
-import "../../styles/components/header.sass";
+import { useState } from 'react';
+import { FaBars } from 'react-icons/fa';
+import '../../styles/components/header.sass';
 
 const Header = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   return (
     <header>
-      <div className="container-header">
-        <div className="logo">
+      <div className='container-header'>
+        <div className='logo'>
           <h1>Rikelly Mendes</h1>
         </div>
         <nav>
           <div
-            className="toggle"
+            className='toggle'
             onClick={() => {
               setIsNavExpanded(!isNavExpanded);
             }}
@@ -23,23 +22,23 @@ const Header = () => {
           </div>
           <ul
             className={
-              isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
+              isNavExpanded ? 'navigation-menu expanded' : 'navigation-menu'
             }
           >
             <li>
-              <Link>Home</Link>
+              <a href='#'>Home</a>
             </li>
             <li>
-              <Link>Sobre mim</Link>
+              <a href='#aboutme'>Sobre mim</a>
             </li>
             <li>
-              <Link>Skills</Link>
+              <a href='#skills'>Skills</a>
             </li>
             <li>
-              <Link>Projetos</Link>
+              <a href='#projects'>Projetos</a>
             </li>
             <li>
-              <Link>Contato</Link>
+              <a href='#contacts'>Contato</a>
             </li>
           </ul>
         </nav>
