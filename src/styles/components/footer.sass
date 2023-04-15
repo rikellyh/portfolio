@@ -1,2 +1,32 @@
 @use '../variables'
 @use '../mixins'
+
+footer
+    background-color: variables.$rosaria-4-hex
+    height: variables.$footer-height
+  
+
+.container-footer
+  .social-links
+    display: flex
+    gap: 0.75rem
+  
+  svg:hover
+    background-color: variables.$rosaria-1-hex
+  span
+    font-size: 0.9rem
+  
+  max-width: 101.25rem
+  margin: 0 auto
+  padding: 0 variables.$spacing-md
+  @include mixins.breakpoint($point: 767px)
+  
+  transition: 0.3s ease padding
+
+  height: 100%
+  text-align: center
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  gap: 1.5rem
