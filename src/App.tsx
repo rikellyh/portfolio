@@ -1,10 +1,13 @@
 import Header from "./components/Header/Header";
+import { Sections } from "./components/Sections/Sections";
 
 function App() {
   return (
     <>
       <Header />
-      <h1>Olá Mundo</h1>
+      <div className="container">
+        <Sections />
+      </div>
     </>
   );
 }

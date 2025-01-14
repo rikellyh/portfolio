@@ -1,3 +1,8 @@
+header {
+  position: fixed;
+  width: 100%;
+}
+
 .header__container {
   position: relative;
   padding: 1.5rem 3rem 0rem;
@@ -6,12 +11,12 @@
   justify-content: space-between;
 }
 
-h1 {
+.header__container h1 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
-p {
+.header__container p {
   color: #f2f2f280;
   font-size: 0.75rem;
 }
