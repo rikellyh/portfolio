@@ -21,12 +21,21 @@ const Header = () => {
           </div>
           <nav
             className={isMobileMenuOpen ? "mobile-menu open" : "mobile-menu"}
+            role="navigation"
           >
             <ul>
-              <li>Home</li>
-              <li>Sobre</li>
-              <li>Projetos</li>
-              <li>Contato</li>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#about">Sobre</a>
+              </li>
+              <li>
+                <a href="#projects">Projetos</a>
+              </li>
+              <li>
+                <a href="#contact">Contato</a>
+              </li>
               <li>
                 <a target="_blank">Currículo</a>
                 <div>

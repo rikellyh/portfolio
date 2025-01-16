@@ -5,9 +5,9 @@ function App() {
   return (
     <>
       <Header />
-      <div className="container">
+      <main className="container">
         <Sections />
-      </div>
+      </main>
     </>
   );
 }
