@@ -1,13 +1,12 @@
-import { useState } from "react";
-
 import { ArrowUpRight, Menu } from "react-feather";
+
+import { MenuOpenProps } from "../../types/menuOpen";
 import "./header.css";
 
-const Header = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const handleToggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-
+const Header: React.FC<MenuOpenProps> = ({
+  isMobileMenuOpen,
+  handleToggleMenu,
+}) => {
   return (
     <header className="header">
       <div className="header__container">

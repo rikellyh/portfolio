@@ -127,9 +127,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  overflow: auto;
   line-height: 1;
-  font-family: "Inter", sans-serif;
+  font-family: "Bricolage Grotesque", serif;
 
   color: var(--on-background);
   background-color: var(--background);
@@ -183,4 +182,14 @@ input[type="number"] {
 section {
   height: 100vh;
   scroll-snap-align: center;
+}
+main {
+  max-width: 1800px;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
