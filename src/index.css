@@ -14,6 +14,24 @@
   -webkit-text-size-adjust: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+  height: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.625rem;
+  transition: filter 2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f2f2f227;
+  filter: opacity(0.5);
+  cursor: grab;
+}
+
 html,
 body,
 div,
@@ -180,13 +198,14 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 section {
-  height: 100vh;
+  /* height: 100vh; */
   scroll-snap-align: center;
 }
 main {
   max-width: 1800px;
   padding: 0 2rem;
   margin: 0 auto;
+  gap: 5rem;
 
   display: flex;
   justify-content: center;

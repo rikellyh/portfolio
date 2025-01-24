@@ -10,6 +10,10 @@
 
 .home__profile--img {
   width: 15rem;
+  border: 2px solid transparent;
+}
+
+.home__profile--img img {
   border: 2px solid var(--on-background);
 }
 
@@ -151,7 +155,7 @@
   }
 
   .home__profile h1 {
-    font-size: 3.75rem;
+    font-size: 3.25rem;
     line-height: 1;
   }
 
