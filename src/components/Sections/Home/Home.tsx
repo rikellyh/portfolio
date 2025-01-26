@@ -15,10 +15,10 @@ export const Home: React.FC<HomeProps> = ({ isMobileMenuOpen }) => {
         </p>
         <div className="home__profile--hyperlink">
           <div className="home__profile--hyperlink--div">
-            <a href="#projects">Meus Projetos</a>
-            <div>
+            <a href="#projects" id="projectsBtn">
+              Meus Projetos
               <ArrowDown />
-            </div>
+            </a>
           </div>
           <div className="home__profile--hyperlink--div">
             <a href="#contact">
