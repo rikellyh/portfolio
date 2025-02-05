@@ -1,0 +1,60 @@
+.contact__wrapper {
+  max-width: 50rem;
+  height: 50rem;
+  margin: 5rem auto;
+}
+
+.contact__wrapper--form {
+  height: 90%;
+  padding: 1.75rem;
+  /* border: 1px solid #ffff; */
+  border-radius: 3.125rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cTitle {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  padding: 0.75rem;
+  border-radius: 0.3125rem;
+  font-family: "Bricolage Grotesque", serif;
+}
+
+textarea {
+  resize: none;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  font-size: 0.8125rem;
+}
+
+.formButton {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  border: 1px solid transparent;
+  color: var(--on-background);
+  background-color: var(--background);
+}
+
+span.error {
+  font-size: 0.75rem;
+}

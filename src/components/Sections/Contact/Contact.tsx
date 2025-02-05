@@ -8,6 +8,7 @@ import { motion, useInView } from "motion/react";
 import emailjs from "@emailjs/browser";
 
 import { SendEmailSchema } from "../../../schemas";
+import "./contact.css";
 
 type FormData = z.infer<typeof SendEmailSchema>;
 
@@ -69,60 +70,56 @@ export const Contact = () => {
   const isVisible = useInView(contactRef, { margin: "-200px" });
 
   return (
-    <div className="contact" ref={contactRef}>
-      <div className="cSection">
-        <motion.form
-          ref={messageFormRef}
-          onSubmit={handleSubmit(sendEmail)}
-          variants={viewAnimations}
-          animate={isVisible ? "animate" : "initial"}
-        >
-          <motion.h1 variants={viewAnimations} className="cTitle">
-            Vamos manter contato
-          </motion.h1>
-          <motion.div variants={viewAnimations} className="formItem">
-            <label>Nome</label>
-            <input
-              type="text"
-              placeholder="Ex: Rikelly Mendes"
-              {...register("user_username")}
-            />
-            {errors.user_username && (
-              <span className="error">{errors.user_username.message}</span>
-            )}
-          </motion.div>
-          <motion.div variants={viewAnimations} className="formItem">
-            <label>Email</label>
-            <input
-              type="email"
-              placeholder="kelly-m83@gmail.com"
-              {...register("user_email")}
-            />
-            {errors.user_email && (
-              <span className="error">{errors.user_email.message}</span>
-            )}
-          </motion.div>
-          <motion.div variants={viewAnimations} className="formItem">
-            <label>Mensagem</label>
-            <textarea
-              rows={10}
-              placeholder="Digite sua mensagem aqui"
-              {...register("user_message")}
-            ></textarea>
-            {errors.user_message && (
-              <span className="error">{errors.user_message.message}</span>
-            )}
-          </motion.div>
-          <motion.button variants={viewAnimations} className="formButton">
-            Enviar
-          </motion.button>
-          {success && <span>Sua mensagem foi enviada com sucesso!</span>}
-          {error && <span>Ops! Tente novamente.</span>}
-        </motion.form>
-      </div>
-      <div className="cSection">
-        <h1>imagem</h1>
-      </div>
+    <div className="contact__wrapper" ref={contactRef}>
+      <motion.form
+        className="contact__wrapper--form"
+        ref={messageFormRef}
+        onSubmit={handleSubmit(sendEmail)}
+        variants={viewAnimations}
+        animate={isVisible ? "animate" : "initial"}
+      >
+        <motion.h1 variants={viewAnimations} className="cTitle">
+          Vamos manter contato
+        </motion.h1>
+        <motion.div variants={viewAnimations} className="formItem">
+          <label>Nome</label>
+          <input
+            type="text"
+            placeholder="Ex: Rikelly Mendes"
+            {...register("user_username")}
+          />
+          {errors.user_username && (
+            <span className="error">{errors.user_username.message}</span>
+          )}
+        </motion.div>
+        <motion.div variants={viewAnimations} className="formItem">
+          <label>Email</label>
+          <input
+            type="email"
+            placeholder="kelly-m83@gmail.com"
+            {...register("user_email")}
+          />
+          {errors.user_email && (
+            <span className="error">{errors.user_email.message}</span>
+          )}
+        </motion.div>
+        <motion.div variants={viewAnimations} className="formItem">
+          <label>Mensagem</label>
+          <textarea
+            rows={10}
+            placeholder="Digite sua mensagem aqui"
+            {...register("user_message")}
+          ></textarea>
+          {errors.user_message && (
+            <span className="error">{errors.user_message.message}</span>
+          )}
+        </motion.div>
+        <motion.button variants={viewAnimations} className="formButton">
+          Enviar
+        </motion.button>
+        {success && <span>Sua mensagem foi enviada com sucesso!</span>}
+        {error && <span>Ops! Tente novamente.</span>}
+      </motion.form>
     </div>
   );
 };
