@@ -4,6 +4,7 @@ header {
 }
 
 .header__container {
+  max-width: 2000px;
   margin: 0 auto;
   padding: 1.5rem 3rem 0rem;
   position: relative;

@@ -3,29 +3,12 @@ import { useForm, SubmitHandler } from "react-hook-form";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-
-import { motion, useInView } from "motion/react";
 import emailjs from "@emailjs/browser";
 
 import { SendEmailSchema } from "../../../schemas";
 import "./contact.css";
 
 type FormData = z.infer<typeof SendEmailSchema>;
-
-const viewAnimations = {
-  initial: {
-    x: 100,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.2,
-    },
-  },
-};
 
 export const Contact = () => {
   const [success, setSuccess] = useState(false);
@@ -67,21 +50,15 @@ export const Contact = () => {
       );
   };
 
-  const isVisible = useInView(contactRef, { margin: "-200px" });
-
   return (
     <div className="contact__wrapper" ref={contactRef}>
-      <motion.form
+      <form
         className="contact__wrapper--form"
         ref={messageFormRef}
         onSubmit={handleSubmit(sendEmail)}
-        variants={viewAnimations}
-        animate={isVisible ? "animate" : "initial"}
       >
-        <motion.h1 variants={viewAnimations} className="cTitle">
-          Vamos manter contato
-        </motion.h1>
-        <motion.div variants={viewAnimations} className="formItem">
+        <h1>Vamos manter contato ;)</h1>
+        <div className="contact__wrapper--formItem">
           <label>Nome</label>
           <input
             type="text"
@@ -91,8 +68,8 @@ export const Contact = () => {
           {errors.user_username && (
             <span className="error">{errors.user_username.message}</span>
           )}
-        </motion.div>
-        <motion.div variants={viewAnimations} className="formItem">
+        </div>
+        <div className="contact__wrapper--formItem">
           <label>Email</label>
           <input
             type="email"
@@ -102,8 +79,8 @@ export const Contact = () => {
           {errors.user_email && (
             <span className="error">{errors.user_email.message}</span>
           )}
-        </motion.div>
-        <motion.div variants={viewAnimations} className="formItem">
+        </div>
+        <div className="contact__wrapper--formItem">
           <label>Mensagem</label>
           <textarea
             rows={10}
@@ -113,13 +90,11 @@ export const Contact = () => {
           {errors.user_message && (
             <span className="error">{errors.user_message.message}</span>
           )}
-        </motion.div>
-        <motion.button variants={viewAnimations} className="formButton">
-          Enviar
-        </motion.button>
+        </div>
+        <button className="contact__wrapper--formButton">Enviar</button>
         {success && <span>Sua mensagem foi enviada com sucesso!</span>}
         {error && <span>Ops! Tente novamente.</span>}
-      </motion.form>
+      </form>
     </div>
   );
 };
