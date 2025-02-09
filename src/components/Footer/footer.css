@@ -1,0 +1,34 @@
+.footer__container {
+  width: 95%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  gap: 2.5rem;
+
+  flex-direction: column;
+  border-top: 1px solid var(--neutral-dark);
+}
+
+.footer__nav li {
+  justify-content: center;
+
+  a {
+    padding: 1rem;
+    gap: 5px;
+  }
+}
+
+@media (min-width: 850px) {
+  .footer__nav li {
+    transition: background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: transparent;
+    cursor: pointer;
+
+    position: relative;
+    border: none;
+    border-radius: 1.5rem;
+  }
+
+  .footer__nav li:hover {
+    background-color: var(--neutral-dark);
+  }
+}

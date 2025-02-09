@@ -6,6 +6,8 @@
 :root {
   --background: #101010;
   --on-background: #f2f2f2;
+  --neutral-dark: #1a1a1a;
+  --neutral-light: #ffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -207,8 +209,10 @@ main {
   margin: 0 auto;
   gap: 5rem;
 
-  display: flex;
   justify-content: center;
   flex-direction: column;
+}
+.displayFlex--center {
+  display: flex;
   align-items: center;
 }

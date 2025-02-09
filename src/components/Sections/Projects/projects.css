@@ -41,7 +41,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.375rem;
-    border-bottom: 1px solid #ffff;
+    border-bottom: 1px solid var(--neutral-light);
   }
 }
 

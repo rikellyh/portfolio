@@ -22,24 +22,36 @@ const Header: React.FC<MenuOpenProps> = ({
             className={isMobileMenuOpen ? "mobile-menu open" : "mobile-menu"}
             role="navigation"
           >
-            <ul>
+            <ul className="displayFlex--center">
               <li>
-                <a href="#home">Home</a>
+                <a href="#home" className="displayFlex--center">
+                  Home
+                </a>
               </li>
               <li>
-                <a href="#about">Sobre</a>
+                <a href="#about" className="displayFlex--center">
+                  Sobre
+                </a>
               </li>
               <li>
-                <a href="#projects">Projetos</a>
+                <a href="#projects" className="displayFlex--center">
+                  Projetos
+                </a>
               </li>
               <li>
-                <a href="#contact">Contato</a>
+                <a href="#contact" className="displayFlex--center">
+                  Contato
+                </a>
               </li>
-              <li>
-                <a target="_blank">Currículo</a>
-                <div>
+              <li className="displayFlex--center">
+                <a
+                  href="https://drive.google.com/file/d/1blDAQXJWPK2NKzvv5HFH11K0_nVsek9p/view?usp=sharing"
+                  className="displayFlex--center"
+                  target="_blank"
+                >
+                  Currículo
                   <ArrowUpRight size={18} />
-                </div>
+                </a>
               </li>
             </ul>
           </nav>

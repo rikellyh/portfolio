@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import { Sections } from "./components/Sections/Sections";
 
 function App() {
@@ -14,9 +15,10 @@ function App() {
         isMobileMenuOpen={isMobileMenuOpen}
         handleToggleMenu={handleToggleMenu}
       />
-      <main className="container">
+      <main className="container displayFlex--center">
         <Sections isMobileMenuOpen={isMobileMenuOpen} />
       </main>
+      <Footer />
     </>
   );
 }

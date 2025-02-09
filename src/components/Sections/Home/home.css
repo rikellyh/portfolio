@@ -36,8 +36,6 @@
 }
 
 .home__profile--hyperlink {
-  display: flex;
-  align-items: center;
   flex-direction: column;
   text-align: center;
 
@@ -62,8 +60,8 @@
   justify-content: center;
 
   background-color: var(--background);
-  color: #ffff;
-  border: 1px solid #ffff;
+  color: var(--neutral-light);
+  border: 1px solid var(--neutral-light);
 }
 
 .home__profile--hyperlink a:last-child {
@@ -72,20 +70,18 @@
   align-content: center;
 
   color: var(--background);
-  background-color: #ffff;
+  background-color: var(--neutral-light);
 }
 
 .home__profile--hyperlink--div {
   width: 100%;
   height: 3rem;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   cursor: pointer;
+  justify-content: center;
+
   border-radius: 0.5rem;
-  border: 1px solid #ffff;
+  border: 1px solid var(--neutral-light);
 }
 
 .home__profile--hyperlink--div:hover {

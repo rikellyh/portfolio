@@ -3,7 +3,7 @@ import "./about.css";
 
 export const About = () => {
   return (
-    <div className="about__wrapper">
+    <div className="about__wrapper displayFlex--center">
       <div>
         <h1>Console.log("Olá Mundo!")</h1>
       </div>
