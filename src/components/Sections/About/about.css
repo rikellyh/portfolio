@@ -36,17 +36,8 @@
   gap: 2rem;
 }
 
-.about__wrapper--img {
-  width: 100%;
-  min-height: 22rem;
-
-  position: relative;
+.about__wrapper--img img {
   border-radius: 10% 0%;
-  z-index: -1;
-
-  img {
-    border-radius: 10% 0%;
-  }
 }
 
 @keyframes cursor {
@@ -98,7 +89,6 @@
 
   .about__wrapper--img {
     width: 33rem;
-    min-height: 28.5rem;
   }
 
   .about__wrapper--list {
@@ -110,7 +100,6 @@
 @media (min-width: 1000px) {
   .about__wrapper--img {
     width: 40rem;
-    min-height: 35rem;
   }
 
   .about__wrapper--list {
@@ -130,9 +119,5 @@
 
   .about__wrapper--list {
     line-height: 3.25rem;
-  }
-
-  .about__wrapper--img {
-    min-height: 41.5rem;
   }
 }

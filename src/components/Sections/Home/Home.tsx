@@ -1,16 +1,10 @@
-import Skeleton from "react-loading-skeleton";
 import { ArrowDown } from "react-feather";
-
 import { HomeProps } from "../../../types/menuOpen";
 
 import AvatarAnime from "../../../assets/img/avatar.jpeg";
 import "./home.css";
 
-export const Home: React.FC<HomeProps> = ({
-  isMobileMenuOpen,
-  handleImageLoad,
-  isImageLoaded,
-}) => {
+export const Home: React.FC<HomeProps> = ({ isMobileMenuOpen }) => {
   return (
     <div className="home__profile">
       <div>
@@ -37,15 +31,7 @@ export const Home: React.FC<HomeProps> = ({
         </div>
       </div>
       <div className="home__profile--img">
-        {isImageLoaded && (
-          <Skeleton
-            circle
-            highlightColor="#f5f5f5"
-            duration={2}
-            className="skeleton"
-          />
-        )}
-        <img src={AvatarAnime} alt="avatar anime" onLoad={handleImageLoad} />
+        <img src={AvatarAnime} alt="avatar anime" />
       </div>
     </div>
   );
