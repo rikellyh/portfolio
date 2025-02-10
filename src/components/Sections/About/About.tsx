@@ -1,7 +1,17 @@
+import Skeleton from "react-loading-skeleton";
+
 import ProfilePicture from "../../../assets/img/profile.jpeg";
 import "./about.css";
 
-export const About = () => {
+interface AboutProps {
+  handleImageLoad: () => void;
+  isImageLoaded: boolean;
+}
+
+export const About: React.FC<AboutProps> = ({
+  handleImageLoad,
+  isImageLoaded,
+}) => {
   return (
     <div className="about__wrapper displayFlex--center">
       <div>
@@ -9,7 +19,19 @@ export const About = () => {
       </div>
       <div className="about__wrapper--div">
         <div className="about__wrapper--img">
-          <img src={ProfilePicture} alt="woman picture" />
+          {isImageLoaded && (
+            <Skeleton
+              highlightColor="#f5f5f5"
+              duration={2}
+              className="skeleton"
+              borderRadius="10% 0%"
+            />
+          )}
+          <img
+            src={ProfilePicture}
+            alt="woman picture"
+            onLoad={handleImageLoad}
+          />
         </div>
         <ul className="about__wrapper--list">
           <li>Apaixonada por criar interfaces intuitivas e responsivas</li>

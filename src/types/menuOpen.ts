@@ -5,4 +5,6 @@ export interface MenuOpenProps {
 
 export interface HomeProps {
   isMobileMenuOpen: boolean;
+  handleImageLoad: () => void;
+  isImageLoaded: boolean;
 }

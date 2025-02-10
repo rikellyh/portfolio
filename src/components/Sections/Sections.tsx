@@ -5,19 +5,35 @@ import { Projects } from "./Projects/Projects";
 
 interface SectionsProps {
   isMobileMenuOpen: boolean;
+  handleImageLoad: () => void;
+  isImageLoaded: boolean;
 }
 
-export const Sections: React.FC<SectionsProps> = ({ isMobileMenuOpen }) => {
+export const Sections: React.FC<SectionsProps> = ({
+  isMobileMenuOpen,
+  handleImageLoad,
+  isImageLoaded,
+}) => {
   return (
     <>
       <section id="home">
-        <Home isMobileMenuOpen={isMobileMenuOpen} />
+        <Home
+          isMobileMenuOpen={isMobileMenuOpen}
+          handleImageLoad={handleImageLoad}
+          isImageLoaded={isImageLoaded}
+        />
       </section>
       <section id="about">
-        <About />
+        <About
+          handleImageLoad={handleImageLoad}
+          isImageLoaded={isImageLoaded}
+        />
       </section>
       <section id="projects">
-        <Projects />
+        <Projects
+          handleImageLoad={handleImageLoad}
+          isImageLoaded={isImageLoaded}
+        />
       </section>
       <section id="contact">
         <Contact />

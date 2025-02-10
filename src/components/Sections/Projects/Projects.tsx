@@ -1,9 +1,18 @@
+import Skeleton from "react-loading-skeleton";
 import { GitHub } from "react-feather";
 
 import ProjectPicture from "../../../assets/img/notepay-img.png";
 import "./projects.css";
 
-export const Projects = () => {
+interface ProjectsProps {
+  handleImageLoad: () => void;
+  isImageLoaded: boolean;
+}
+
+export const Projects: React.FC<ProjectsProps> = ({
+  handleImageLoad,
+  isImageLoaded,
+}) => {
   return (
     <div className="projects__wrapper">
       <div className="projects__wrapper--description">
@@ -24,7 +33,19 @@ export const Projects = () => {
       </div>
       <div className="projects__wrapper--project">
         <a href="https://github.com/rikellyh/notePay" target="_blank">
-          <img src={ProjectPicture} alt="project notepay print" />
+          {isImageLoaded && (
+            <Skeleton
+              highlightColor="#f5f5f5"
+              duration={2}
+              borderRadius="0.5rem"
+              className="skeleton"
+            />
+          )}
+          <img
+            src={ProjectPicture}
+            alt="project notepay print"
+            onLoad={handleImageLoad}
+          />
         </a>
       </div>
     </div>

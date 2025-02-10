@@ -9,12 +9,11 @@
 }
 
 .home__profile--img {
-  width: 15rem;
-  border: 2px solid transparent;
-}
+  position: relative;
+  z-index: -1;
 
-.home__profile--img img {
-  border: 2px solid var(--on-background);
+  width: 15rem;
+  min-height: 16.5rem;
 }
 
 .home__profile--img,
@@ -144,6 +143,7 @@
 @media (min-width: 600px) {
   .home__profile--img {
     width: 20rem;
+    min-height: 22rem;
   }
 }
 
@@ -162,6 +162,7 @@
 
   .home__profile--img {
     width: 25rem;
+    min-height: 2rem;
   }
 
   .home__profile h1 {
@@ -176,5 +177,11 @@
 
   .home__profile--hyperlink {
     flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home__profile {
+    padding: 0 8.5rem;
   }
 }
