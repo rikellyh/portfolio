@@ -1,5 +1,6 @@
 import { ArrowDown } from "react-feather";
 import { HomeProps } from "../../../types/menuOpen";
+import { ImageRender } from "../ImageRender/ImageRender";
 
 import AvatarAnime from "../../../assets/img/avatar.jpeg";
 import "./home.css";
@@ -31,7 +32,7 @@ export const Home: React.FC<HomeProps> = ({ isMobileMenuOpen }) => {
         </div>
       </div>
       <div className="home__profile--img">
-        <img src={AvatarAnime} alt="avatar anime" />
+        <ImageRender img={AvatarAnime} alt="avatar anime" />
       </div>
     </div>
   );

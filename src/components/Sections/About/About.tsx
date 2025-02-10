@@ -1,3 +1,5 @@
+import { ImageRender } from "../ImageRender/ImageRender";
+
 import ProfilePicture from "../../../assets/img/profile.jpeg";
 import "./about.css";
 
@@ -9,7 +11,7 @@ export const About = () => {
       </div>
       <div className="about__wrapper--div">
         <div className="about__wrapper--img">
-          <img src={ProfilePicture} alt="woman picture" />
+          <ImageRender img={ProfilePicture} alt="woman picture" />
         </div>
         <ul className="about__wrapper--list">
           <li>Apaixonada por criar interfaces intuitivas e responsivas</li>

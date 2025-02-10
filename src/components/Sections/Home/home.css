@@ -10,14 +10,8 @@
 
 .home__profile--img {
   width: 15rem;
-  border: 2px solid transparent;
 }
 
-.home__profile--img img {
-  border: 2px solid var(--on-background);
-}
-
-.home__profile--img,
 .home__profile--img img {
   border-radius: 50%;
 }
