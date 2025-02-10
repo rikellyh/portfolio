@@ -201,7 +201,6 @@ input[type="number"] {
 }
 section {
   width: 100%;
-  scroll-snap-align: center;
 }
 main {
   max-width: 1800px;

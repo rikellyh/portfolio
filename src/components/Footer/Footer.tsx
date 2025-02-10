@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "react-feather";
 import "./footer.css";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container displayFlex--center">
@@ -33,6 +33,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
