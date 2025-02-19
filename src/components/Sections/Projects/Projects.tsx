@@ -1,6 +1,5 @@
 import { GitHub } from "react-feather";
 
-import { ImageRender } from "../ImageRender/ImageRender";
 import ProjectPicture from "../../../assets/img/notepay-img.png";
 import "./projects.css";
 
@@ -25,7 +24,7 @@ export const Projects = () => {
       </div>
       <div className="projects__wrapper--project">
         <a href="https://github.com/rikellyh/notePay" target="_blank">
-          <ImageRender img={ProjectPicture} alt="project notepay print" />
+          <img src={ProjectPicture} alt="project notepay print" />
         </a>
       </div>
     </div>
