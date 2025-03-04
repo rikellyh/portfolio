@@ -45,8 +45,12 @@
   }
 }
 
-.projects__wrapper--project img {
-  border-radius: 0.5rem;
+.projects__wrapper--project {
+  width: 100%;
+
+  img {
+    border-radius: 0.5rem;
+  }
 }
 
 @media (min-width: 850px) {
